@@ -1,0 +1,90 @@
+﻿<MyNamespace:BaseWindow x:Class="Programme_V170824.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:MyNamespace="clr-namespace:CommonLib;assembly=CommonLib"
+        xmlns:local="clr-namespace:Programme_V170824"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="300" Width="400" WindowStyle="None">
+    <Grid Background="#a1C6C6C6" Opacity="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="360"/>
+        </Grid.RowDefinitions>
+        <Border ClipToBounds ="True" Margin="10" Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="0" CornerRadius="0,0,7,7 ">
+            <Grid Grid.Row="0" Grid.Column="0" Margin="0">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="43"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="322"/>
+                        <ColumnDefinition Width="32"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Image/Blue_Background.jpg">
+                            
+                        </ImageBrush>
+                    </Grid.Background>
+                    <Label Grid.Row="0" Grid.Column="0" Content="请登录" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="20 0 0 0" FontSize="16" Foreground="White"/>
+                 <!--   <Button Grid.Row="0" Grid.Column="1" Width="25" Height="25" HorizontalAlignment="Center"   VerticalAlignment="Center"  Click="Btn_Close_Click" Name="Btn_Close">
+                        
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Label Name="close_tips" MouseEnter="close_tips_MouseEnter" MouseLeave="close_tips_MouseLeave" Foreground="White" FontSize="18" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Cursor="Hand">
+                                    <Label.Background>
+                                        <ImageBrush ImageSource="Image/exit.png"></ImageBrush>
+                                    </Label.Background>
+                                </Label>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>-->
+                    
+                   
+                </Grid>
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0" Background="#FFededed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Width="334" Height="50">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Image/Name_Login.png"/>
+                        </Label.Background>
+                        <TextBox x:Name="LoginName" Margin="45,0,0,0" Width="280" Height="50" Padding="20,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left" FontSize="24" VerticalContentAlignment="Center" Background="{x:Null}" BorderThickness="0" Text="">
+                            
+                        </TextBox>
+                    </Label>
+                    <Label Grid.Row="1" Grid.Column="0" Width="334" Height="50">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Image/Password_Login.png"/>
+                        </Label.Background>
+                        <PasswordBox x:Name="LoginPassword" Margin="45,0,0,0" Width="280" Height="50" Padding="20,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left" FontSize="24" VerticalContentAlignment="Center" Background="{x:Null}" BorderThickness="0">
+
+                        </PasswordBox>
+                    </Label>
+                    <Button Cursor="Hand" Name="btn_Login" Opacity="1" Grid.Column="0" Grid.Row="2" Click="btn_Login_Click" Foreground="#FF7C7C03" Height="50" Width="320" MouseEnter="btn_Login_MouseEnter" Mouse.MouseLeave="btn_Login_MouseLeave">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border ClipToBounds="True" CornerRadius="5">
+                                    <Label Name="tips_for_login" Content="登    陆" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" Foreground="White">
+                                        <Label.Background>
+                                            <ImageBrush ImageSource="Image/Blue_Background.jpg"></ImageBrush>
+                                        </Label.Background>
+                                    </Label>
+                                 </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                </Grid>
+                
+                
+            </Grid>
+        </Border>
+    </Grid>
+</MyNamespace:BaseWindow>
