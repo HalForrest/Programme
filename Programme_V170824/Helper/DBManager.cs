@@ -14,7 +14,7 @@ namespace Programme_V170824.Helper
         // 链接数据库
             // 关闭连接
             // 数据查询
-        public static SqlConnection Sqlconn;
+        public static SqlConnection Sqlconn;//程序中链接的数据库都是一样的 
 
         public static void DBConnect(string Server = "118.178.131.196", string Database = "DBgzb1", string userid = "gzb1", string pwd = "gzb123456")
         {
@@ -25,10 +25,16 @@ namespace Programme_V170824.Helper
         {
             Sqlconn.Close();
         }
-        public static DataTable dt;
-        public static void DataHandle(string str_Sql,func f)
+       // public static DataTable dt;
+       /// <summary>
+       /// 数据库的操作
+       /// </summary>
+       /// <param name="str_Sql"></param>
+       /// <param name="f"></param>
+       /// <returns>根据不同的语句对不同的表进行操作</returns>
+        public static DataTable DataHandle(string str_Sql,func f)
         {
-             dt= new DataTable();
+            DataTable dt= new DataTable();
 
             switch (f)
             {
@@ -53,6 +59,7 @@ namespace Programme_V170824.Helper
                     break;
 
             }
+            return dt;
         }
 
     }

@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CommonLib;
+using System.Data;
+using System.Data.SqlClient;
+using System.Threading;
 
 namespace Programme_V170824
 {
@@ -20,9 +23,11 @@ namespace Programme_V170824
     /// </summary>
     public partial class Login : BaseWindow
     {
+        public DataTable dt;
         public Login()
         {
             InitializeComponent();
+            this.Closing += new System.ComponentModel.CancelEventHandler(BaseWindow_Closing);
         }
         #region 没用事件
         /*
@@ -43,16 +48,17 @@ namespace Programme_V170824
             string pwd = LoginPassword.Password.ToString();
             Helper.DBManager.DBConnect();
             string str1 = "Select * from MyUser where user_Name='"+name+"'";
-            Helper.DBManager.DataHandle(str1, Helper.func.select);
-            string pw = (string)Helper.DBManager.dt.Rows[0][1];
+            dt = Helper.DBManager.DataHandle(str1, Helper.func.select);
+            string pw = (string)dt.Rows[0][1];
             pw= pw.Trim();
-            if (Helper.DBManager.dt!=null)
+            if (dt!=null)
             {
                 if(pw==pwd)
                 {
+                    
                     this.Close();
-                    ProductWindow pd = new ProductWindow();
-                    pd.Show();
+                    
+                    
                 }
                 else
                 {
@@ -79,6 +85,12 @@ namespace Programme_V170824
         private void Btn_Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void BaseWindow_Closed(object sender, EventArgs e)
+        {
+            ProductWindow pd = new ProductWindow();
+            pd.Show();
         }
     }
 }

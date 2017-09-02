@@ -1,11 +1,12 @@
-﻿<Window x:Class="Programme_V170824.ProductWindow"
+﻿<MyNamespace:BaseWindow x:Class="Programme_V170824.ProductWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:MyNamespace="clr-namespace:CommonLib;assembly=CommonLib"
         xmlns:local="clr-namespace:Programme_V170824"
         mc:Ignorable="d"
-        Title="ProductWindow" Height="768" Width="1024">
+        Title="ProductWindow" Height="768" Width="1024" WindowStartupLocation="CenterScreen">
  
         <Window.Resources>
             <!--Separator控件模块样式-->
@@ -136,16 +137,16 @@
                             </LinearGradientBrush>
                         </StackPanel.Background>
                         <!--查询-->
-                        <Button Name="btn_Repair" Content="查询" Style="{StaticResource ResourceKey=buttonStyle}" Click="btn_Repair_Click"></Button>
+                        <Button Name="btn_Repair" Content="1" Style="{StaticResource ResourceKey=buttonStyle}" Click="btn_Repair_Click"></Button>
                         <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
                         <!--添加-->
-                        <Button Content="添加" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
+                        <Button Content="2" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
                         <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
                         <!--修改-->
-                        <Button Content="修改" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
+                        <Button Content="3" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
                         <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
                         <!--删除-->
-                        <Button Content="删除" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
+                        <Button Content="4" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
                     <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
                 </StackPanel>
                 </Grid>
@@ -172,4 +173,4 @@
             </StatusBar>
         </Grid>
     
-</Window>
+</MyNamespace:BaseWindow>

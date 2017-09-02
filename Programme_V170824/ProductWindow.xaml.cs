@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CommonLib;
 
 namespace Programme_V170824
 {
@@ -18,7 +19,7 @@ namespace Programme_V170824
     /// ProductWindow.xaml 的交互逻辑
     /// </summary>
 
-    public partial class ProductWindow : Window
+    public partial class ProductWindow : BaseWindow
     {
         public ProductWindow()
         {
@@ -29,7 +30,7 @@ namespace Programme_V170824
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            btn_Repair_Click(null, null);
+           // btn_Repair_Click(null, null);
             
         }
         /// <summary>
@@ -80,21 +81,21 @@ namespace Programme_V170824
             btn.Background = GetLinearGradientBrush();
             UserControl userControl = null;
             stackPanelRight.Children.Clear();
-            if (btn.Content.ToString().Equals("查询"))
+            if (btn.Content.ToString().Equals("1"))
             {
-                 userControl = new MyUserControl("查询");
+                 userControl = new MyUserControl("1");
             }
-            if(btn.Content.ToString().Equals("添加"))
+            if(btn.Content.ToString().Equals("2"))
             {
                 userControl = new MyUserControl2();
             }
-            if (btn.Content.ToString().Equals("删除"))
+            if (btn.Content.ToString().Equals("3"))
             {
-                userControl = new MyUserControl("删除");
+                userControl = new MyUserControl("3");
             }
-            if (btn.Content.ToString().Equals("修改"))
+            if (btn.Content.ToString().Equals("4"))
             {
-                userControl = new MyUserControl("修改");
+                userControl = new MyUserControl("4");
             }
             stackPanelRight.Children.Add(userControl);
         }

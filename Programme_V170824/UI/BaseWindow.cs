@@ -71,7 +71,7 @@ namespace CommonLib
             //};
         }
 
-        void BaseWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        public void BaseWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (!closeStoryBoardCompleted)
             {

@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Programme_V170824"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="300" Width="400" WindowStyle="None">
+        Title="Login" Height="300" Width="400" WindowStyle="None" Closed="BaseWindow_Closed">
     <Grid Background="#a1C6C6C6" Opacity="1">
         <Grid.RowDefinitions>
             <RowDefinition Height="360"/>
