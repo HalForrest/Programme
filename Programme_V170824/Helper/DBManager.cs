@@ -32,9 +32,10 @@ namespace Programme_V170824.Helper
        /// <param name="str_Sql"></param>
        /// <param name="f"></param>
        /// <returns>根据不同的语句对不同的表进行操作</returns>
-        public static DataTable DataHandle(string str_Sql,func f)
+        public static object DataHandle(string str_Sql,func f)
         {
             DataTable dt= new DataTable();
+            int i = 0;//受影响行数
 
             switch (f)
             {
@@ -50,16 +51,46 @@ namespace Programme_V170824.Helper
 
                     
                     }
-                        break;
+                    return dt;
+                       
                 case func.insert:
-                    break;
+                    using (SqlConnection sqlconn_insert = Sqlconn)
+                    {
+                        sqlconn_insert.Open();
+                        SqlCommand com = new SqlCommand();
+                        com.Connection = sqlconn_insert;
+                        com.CommandType = CommandType.Text;
+                        com.CommandText = str_Sql;
+                        SqlDataReader sdr = com.ExecuteReader();
+                        sdr.Close();
+                        sqlconn_insert.Close();
+                    }
+                        break;
                 case func.delete:
-                    break;
+                    using (SqlConnection sqlconn_delete = Sqlconn)
+                    {
+                        sqlconn_delete.Open();
+                        SqlCommand com = new SqlCommand();
+                        com.Connection = sqlconn_delete;
+                        com.CommandType = CommandType.Text;
+                        com.CommandText = str_Sql;
+                        SqlDataReader sdr = com.ExecuteReader();
+                        sdr.Close();
+                        sqlconn_delete.Close();
+                    }
+                        break;
                 case func.update:
-                    break;
+                    using (SqlConnection sqlconn_update = Sqlconn)
+                    {
+                        sqlconn_update.Open();
+                        SqlCommand com = new SqlCommand(str_Sql, sqlconn_update);
+                        i= com.ExecuteNonQuery();
+                        sqlconn_update.Close();
+                    }
+                        break;
 
             }
-            return dt;
+            return null;
         }
 
     }

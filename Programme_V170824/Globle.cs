@@ -12,6 +12,6 @@ namespace Programme_V170824
     static class Globle
     {
         public static string Jur = null;//权限
-
+        public static string User_Name = "user";
     }
 }

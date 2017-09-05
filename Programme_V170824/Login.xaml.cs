@@ -48,7 +48,7 @@ namespace Programme_V170824
             string pwd = LoginPassword.Password.ToString();
             Helper.DBManager.DBConnect();
             string str1 = "Select * from MyUser where user_Name='"+name+"'";
-            dt = Helper.DBManager.DataHandle(str1, Helper.func.select);
+            dt = Helper.DBManager.DataHandle(str1, Helper.func.select) as DataTable;
             string pw = (string)dt.Rows[0][1];
             pw= pw.Trim();
             if (dt!=null)

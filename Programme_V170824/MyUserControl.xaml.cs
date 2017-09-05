@@ -44,7 +44,7 @@ namespace Programme_V170824
             
             Helper.DBManager.DBConnect();//测试用
 
-            DataTable dt =  Helper.DBManager.DataHandle(str_sql, Helper.func.select);
+            DataTable dt =  Helper.DBManager.DataHandle(str_sql, Helper.func.select) as DataTable;
             if(dt!=null)
             {
                 textBlock1.Text += "数据库操作成功！\n";

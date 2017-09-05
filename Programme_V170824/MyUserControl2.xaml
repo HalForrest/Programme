@@ -7,14 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="631" d:DesignWidth="848">
     <UserControl.Resources>
-    <Style x:Key="RepliceMessageStyle" TargetType="TextBox">
-        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
-        <Setter Property="FontSize" Value="12"></Setter>
-        <Setter Property="Foreground" Value="White"></Setter>
-        <Setter Property="Margin" Value="10,5,0,0"></Setter>
-        <Setter Property="TextWrapping" Value="Wrap"></Setter>
-        <Setter Property="MaxWidth" Value="200"></Setter>
-    </Style>
+        <Style x:Key="RepliceMessageStyle" TargetType="TextBox">
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Margin" Value="10,5,0,0"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="MaxWidth" Value="200"></Setter>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -24,8 +24,8 @@
         <Button x:Name="Selectbtn" Content="查询" HorizontalAlignment="Left" Margin="339,37,0,0" VerticalAlignment="Top" Width="75" Click="Selectbtn_Click"/>
         <ComboBox x:Name="SelectcomboBox" HorizontalAlignment="Left" Margin="27,37,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="SelecttextBox" HorizontalAlignment="Left" Height="23" Margin="172,37,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="0,89,0,0" VerticalAlignment="Top" Height="455" Width="337" SelectionChanged="dataGrid_SelectionChanged"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="72" Margin="27,549,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="260"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="0,89,0,0" VerticalAlignment="Top" Height="271" Width="337" SelectionChanged="dataGrid_SelectionChanged"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="251" Margin="27,360,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="260" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
 
         <Canvas Grid.Column="1" HorizontalAlignment="Stretch"   Margin="20,20,20,20" VerticalAlignment="Stretch" >
             <Label x:Name="label" Content="产品名称" Canvas.Left="20" Canvas.Top="20" Height="30"/>
@@ -35,23 +35,26 @@
             <Label x:Name="label4" Content="品牌" Canvas.Left="20" Canvas.Top="220"/>
             <Label x:Name="label5" Content="型号" Canvas.Left="20" Canvas.Top="270"/>
             <Label x:Name="label6" Content="单价" Canvas.Left="20" Canvas.Top="320"/>
-            <Label x:Name="label7" Content="已采" Canvas.Left="20" Canvas.Top="370"/>
-            <Label x:Name="label8" Content="未采" Canvas.Left="20" Canvas.Top="420"/>
+            <Label x:Name="label7" Content="采购状况" Canvas.Left="20" Canvas.Top="370"/>
+            <Label x:Name="label8" Content="证书" Canvas.Left="20" Canvas.Top="420"/>
             <Label x:Name="label9" Content="产品参数" Canvas.Left="235" Canvas.Top="26"/>
             <Label x:Name="label10" Content="备注" Canvas.Left="235" Canvas.Top="266"/>
-            <TextBox x:Name="textBox_Name" Height="23" Canvas.Left="80" TextWrapping="Wrap"  Canvas.Top="20" Width="120"/>
+            <TextBox x:Name="textBox_Name" Height="23" Canvas.Left="80" TextWrapping="Wrap"  Canvas.Top="20" Width="120" />
             <TextBox x:Name="textBox_ProductNum" Height="23" Canvas.Left="83" TextWrapping="Wrap"  Canvas.Top="70" Width="120"/>
-            <TextBox x:Name="textBox_SupplierNum" Height="23" Canvas.Left="83" TextWrapping="Wrap"  Canvas.Top="120" Width="120"/>
             <TextBox x:Name="textBox_Address" Height="23" Canvas.Left="83" TextWrapping="Wrap" Canvas.Top="170" Width="120"/>
             <TextBox x:Name="textBox_Brand" Height="23" Canvas.Left="83" TextWrapping="Wrap"  Canvas.Top="220" Width="120"/>
             <TextBox x:Name="textBox_Model" Height="23" Canvas.Left="83" TextWrapping="Wrap" Canvas.Top="270" Width="120"/>
             <TextBox x:Name="textBox_Price" Height="23" Canvas.Left="83" TextWrapping="Wrap"  Canvas.Top="320" Width="120"/>
             <TextBox x:Name="textBox_YiCai" Height="23" Canvas.Left="83" TextWrapping="Wrap" Canvas.Top="370" Width="120"/>
-            <TextBox x:Name="textBox_WeiCai" Height="23" Canvas.Left="83" TextWrapping="Wrap"  Canvas.Top="420" Width="120"/>
+            <TextBox x:Name="textBox_ZhengShu" Height="23" Canvas.Left="83" TextWrapping="Wrap"  Canvas.Top="420" Width="120"/>
             <TextBox x:Name="textBox_Para" Height="185" Canvas.Left="235" TextWrapping="Wrap" Canvas.Top="58" Width="149" AcceptsReturn="True" VerticalScrollBarVisibility="Visible">
-                
+
             </TextBox>
             <TextBox x:Name="textBox_Remarks" Height="257" Canvas.Left="235" TextWrapping="Wrap" Canvas.Top="296" Width="149" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+            <Button x:Name="Updatabtn" Content="更新" Canvas.Left="20" Canvas.Top="478" Width="75" Click="Updatabtn_Click"/>
+            <Button x:Name="Deletebtn" Content="删除" Canvas.Left="20" Canvas.Top="503" Width="75" Click="Deletebtn_Click"/>
+            <ComboBox x:Name="comboBox_SupplierNum" Canvas.Left="83" Canvas.Top="120" Width="120" IsEditable="True"  KeyDown="comboBox_SupplierNum_KeyDown_1"/>
+            <Button x:Name="Insertbtn" Content="添加" Canvas.Left="124" Canvas.Top="478" Width="76" Click="Insertbtn_Click"/>
 
         </Canvas>
 
