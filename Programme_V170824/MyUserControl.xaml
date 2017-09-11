@@ -7,8 +7,56 @@
              mc:Ignorable="d" 
              d:DesignHeight="631" d:DesignWidth="848">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="238" Width="115"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="198,51,0,0" VerticalAlignment="Top" Height="570" Width="640"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Margin="10,480,0,0" Height="141"  HorizontalAlignment="Left" VerticalAlignment="Top"  >
+            <ScrollViewer.Content>
+                <TextBlock x:Name="textBlock"  TextWrapping="Wrap" Width="262"  />
+            </ScrollViewer.Content>
+        </ScrollViewer>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="390" Width="272" SelectionChanged="dataGrid_SelectionChanged" ColumnWidth="50"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="135,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Selectbtn" Content="查询" HorizontalAlignment="Left" Margin="135,38,0,0" VerticalAlignment="Top" Width="75" Click="Selectbtn_Click"/>
+
+
+        <Label x:Name="label_supNum" Content="供应商序号" Grid.Column="1" HorizontalAlignment="Left" Margin="100,40,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supNum" Grid.Column="1" HorizontalAlignment="Left" Margin="175,40,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supName" Content="公司名称" Grid.Column="1" HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supName" Grid.Column="1" HorizontalAlignment="Left" Margin="175,90,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supChannel" Content="渠道" Grid.Column="1" HorizontalAlignment="Left" Margin="100,140,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supChannel" Grid.Column="1" HorizontalAlignment="Left" Margin="175,140,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supLX" Content="联系人" Grid.Column="1" HorizontalAlignment="Left" Margin="100,190,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supLX" Grid.Column="1" HorizontalAlignment="Left" Margin="175,190,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supTel" Content="电话" Grid.Column="1" HorizontalAlignment="Left" Margin="100,240,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supTel" Grid.Column="1" HorizontalAlignment="Left" Margin="175,240,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supAddress" Content="地址" Grid.Column="1" HorizontalAlignment="Left" Margin="100,290,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supAddress" Grid.Column="1" HorizontalAlignment="Left" Margin="175,290,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supBank" Content="开户行" Grid.Column="1" HorizontalAlignment="Left" Margin="100,340,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supBank" Grid.Column="1" HorizontalAlignment="Left" Margin="175,340,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supEmail" Content="邮箱/QQ" Grid.Column="1" HorizontalAlignment="Left" Margin="100,390,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supEmail" Grid.Column="1" HorizontalAlignment="Left" Margin="175,390,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supWebsite" Content="网址" Grid.Column="1" HorizontalAlignment="Left" Margin="100,440,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supWebsite" Grid.Column="1" HorizontalAlignment="Left" Margin="175,440,0,0" VerticalAlignment="Top" Height="23" Width="120"/>
+
+        <Label x:Name="label_supRemarks" Content="备注" Grid.Column="1" HorizontalAlignment="Left" Margin="100,490,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox_supRemarks" Grid.Column="1" HorizontalAlignment="Left" Margin="174.6,490,0,0" VerticalAlignment="Top" Height="120" Width="352" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+        <Button x:Name="Updatebtn" Content="更新" Grid.Column="1" HorizontalAlignment="Left" Margin="397.6,140,0,0" VerticalAlignment="Top" Width="75" Click="Updatebtn_Click"/>
+        <Button x:Name="Deletebtn" Content="删除" Grid.Column="1" HorizontalAlignment="Left" Margin="397.6,190,0,0" VerticalAlignment="Top" Width="75" Click="Deletebtn_Click"/>
+        <Button x:Name="Insertbtn" Content="添加" Grid.Column="1" HorizontalAlignment="Left" Margin="397.6,240,0,0" VerticalAlignment="Top" Width="75" Click="Insertbtn_Click"/>
+        <TextBlock x:Name="textBlock1" Grid.Column="1" HorizontalAlignment="Left" Margin="9.6,521,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="89" Width="114"/>
+
+
+
     </Grid>
 </UserControl>

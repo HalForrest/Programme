@@ -137,17 +137,15 @@
                             </LinearGradientBrush>
                         </StackPanel.Background>
                         <!--查询-->
-                        <Button Name="btn_Repair" Content="1" Style="{StaticResource ResourceKey=buttonStyle}" Click="btn_Repair_Click"></Button>
+                        <Button Name="btn_Repair" Content="供应商" Style="{StaticResource ResourceKey=buttonStyle}" Click="btn_Repair_Click"></Button>
                         <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
                         <!--添加-->
-                        <Button Content="2" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
+                        <Button Content="产品" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
                         <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
                         <!--修改-->
-                        <Button Content="3" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
-                        <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
+                    
                         <!--删除-->
-                        <Button Content="4" Style="{StaticResource ResourceKey=buttonStyle}"></Button>
-                    <Separator Height="4" Style="{StaticResource ResourceKey=CorrectSeparatorStyle}"></Separator>
+                    
                 </StackPanel>
                 </Grid>
                 <!--右侧功能处理-->

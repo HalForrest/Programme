@@ -81,22 +81,15 @@ namespace Programme_V170824
             btn.Background = GetLinearGradientBrush();
             UserControl userControl = null;
             stackPanelRight.Children.Clear();
-            if (btn.Content.ToString().Equals("1"))
+            if (btn.Content.ToString().Equals("供应商"))
             {
-                 userControl = new MyUserControl("1");
+                 userControl = new MyUserControl();
             }
-            if(btn.Content.ToString().Equals("2"))
+            if(btn.Content.ToString().Equals("产品"))
             {
                 userControl = new MyUserControl2();
             }
-            if (btn.Content.ToString().Equals("3"))
-            {
-                userControl = new MyUserControl("3");
-            }
-            if (btn.Content.ToString().Equals("4"))
-            {
-                userControl = new MyUserControl("4");
-            }
+            
             stackPanelRight.Children.Add(userControl);
         }
 

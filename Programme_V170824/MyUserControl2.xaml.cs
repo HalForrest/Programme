@@ -181,18 +181,14 @@ namespace Programme_V170824
 
             Helper.DBManager.DBConnect();
             Helper.DBManager.DataHandle(sql_updata, Helper.func.update);
-       
 
-                
+            Helper.DBManager.DBConnectionClose();
+            textBox.Text += "更新成功！\n";
+
+
         }
 
-        /// <summary>·······
-        /// 将修改过的DataText改过来
-        /// </summary>
-        private void changeDataText()
-        {
-            
-        }
+     
 
 
         private void Deletebtn_Click(object sender, RoutedEventArgs e)
@@ -274,8 +270,8 @@ namespace Programme_V170824
         {
             DataTable dtrepeat;
             bool result = false ;
-            string selectstr = SelecttextBox.Text.ToString();
-            string rowName = SelectcomboBox.SelectedValue.ToString();
+            string selectstr = textBox_ProductNum.Text.ToString();
+            
             string str_sql = "select * from Product where 产品序号  = '" + textBox_ProductNum.Text + "'";
             Helper.DBManager.DBConnect();
             dtrepeat = Helper.DBManager.DataHandle(str_sql, Helper.func.select) as DataTable;
