@@ -3,11 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     
         xmlns:local="clr-namespace:Programme_V170824"
         mc:Ignorable="d"
-        Title="ProgrammeWindow" Height="300" Width="300">
+        Title="ProgrammeWindow" Height="300" Width="300" Background="Black">
     <Grid>
-        <Button x:Name="button" Content="下载" HorizontalAlignment="Left" Margin="131,158,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="button" Content="下载" HorizontalAlignment="Left" Margin="83,183,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <MediaElement x:Name="mediaElement"  LoadedBehavior="Manual" HorizontalAlignment="Left"   Height="52" Margin="163,165,0,0" VerticalAlignment="Top" Width="50" MediaEnded="mediaElement_MediaEnded">
+            
+
+        </MediaElement>
+       
 
     </Grid>
 </Window>

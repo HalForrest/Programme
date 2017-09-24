@@ -5,16 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Programme_V170824"
         mc:Ignorable="d"
-        Title="Window1" Height="300" Width="300">
+        Title="Window1" Height="500" Width="800">
     <Grid>
-        <TreeView Height="260" Width="100" Margin="10,10,183.6,0.4" >
-            <TreeViewItem Name="root" Header="树状图测试" IsExpanded="True">
-                <TreeViewItem Name="child1" Header="子节点一">
-                    <TreeViewItem Name="child11" Header="孙节点一"/>
-                </TreeViewItem>
-                <TreeViewItem Name="child2" Header="子节点二"/>
-            </TreeViewItem>
-            
-        </TreeView>
+        <Button x:Name="button_up" Content="上传" HorizontalAlignment="Left" Margin="59,78,0,0" VerticalAlignment="Top" Width="75" Click="button_up_Click"/>
+        <Button x:Name="button_down" Content="下载" HorizontalAlignment="Left" Margin="59,136,0,0" VerticalAlignment="Top" Width="75" Click="button_down_Click"/>
+        <Button x:Name="button_filelist" Content="文件列表" HorizontalAlignment="Left" Margin="59,191,0,0" VerticalAlignment="Top" Width="75" Click="button_filelist_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="349" Margin="164,65,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="293"/>
+        <TreeView x:Name="treeView" HorizontalAlignment="Left" Height="349" Margin="475,65,0,0" VerticalAlignment="Top" Width="309"/>
+
     </Grid>
 </Window>

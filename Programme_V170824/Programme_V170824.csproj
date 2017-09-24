@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FtpUpDown.cs" />
     <Compile Include="Helper\Function.cs" />
     <Compile Include="MyUserControl2.xaml.cs">
       <DependentUpon>MyUserControl2.xaml</DependentUpon>
@@ -170,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UI\CloseLayerPanel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\loading.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
